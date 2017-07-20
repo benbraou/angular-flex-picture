@@ -1,5 +1,8 @@
 # angular-flex-picture
 
+[![Build Status](https://travis-ci.org/benbraou/angular-flex-picture.svg?branch=main)](https://travis-ci.org/benbraou/angular-flex-picture)
+
+
 angular-flex-picture is a small library that is meant to be used within an @angular/flex-layout project.  
 It provides a directive `flexMedia` that applies a media query to an HTML source element within a picture element.  
 All the breakpoint aliases defined in @angular/flex-layout are recognized.  
