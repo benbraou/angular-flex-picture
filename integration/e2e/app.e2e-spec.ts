@@ -1,6 +1,6 @@
-import { browser, element, by } from 'protractor';
+import {browser, by, element, ElementFinder} from 'protractor';
 
-describe('QuickStart Lib E2E Tests', function () {
+describe('QuickStart Lib E2E Tests', function() {
 
   beforeEach(() => browser.get(''));
 
@@ -9,13 +9,11 @@ describe('QuickStart Lib E2E Tests', function () {
       expect(browserLog).toEqual([]);
     });
   });
-
-  it('should display lib', () => {
-    expect(element(by.css('h2')).getText()).toEqual('Hello Angular Library');
+  it('should', () => {
+    element.all(by.css('source')).then(function(sourceElts: ElementFinder[]) {
+      expect(sourceElts.length).toEqual(2);
+      expect(sourceElts[0].getAttribute('media'))
+          .toEqual('screen and (max-width: 599px)');
+    });
   });
-
-  it('should display meaning', () => {
-    expect(element(by.css('h3')).getText()).toEqual('Meaning is: 42');
-  });
-
 });
