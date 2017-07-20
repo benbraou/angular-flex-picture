@@ -1,12 +1,13 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { LibModule } from 'quickstart-lib';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {FlexMediaModule} from 'angular-flex-picture';
 
-import { AppComponent }  from './app.component';
+import {AppComponent} from './app.component';
 
 @NgModule({
-  imports:      [ BrowserModule, LibModule],
+  imports: [BrowserModule, FlexMediaModule],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+}
