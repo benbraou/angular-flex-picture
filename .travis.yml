@@ -13,6 +13,7 @@ before_install:
   - export CHROME_BIN=chromium-browser
 install:
   - npm install
+  - npm run install-peer 
 script:
   - npm run lint
   - npm run test:once
