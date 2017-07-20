@@ -1,12 +1,21 @@
-import {Directive, ElementRef, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {BreakPointRegistry} from '@angular/flex-layout';
+import {
+  Directive,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
+import { BreakPointRegistry } from '@angular/flex-layout';
 
-@Directive({selector: '[flexMedia]'})
+@Directive({ selector: '[flexMedia]' })
 export class FlexMediaDirective implements OnInit, OnChanges {
   @Input('flexMedia') flexBreakPoint: string;
 
-  constructor(private el: ElementRef, private breakPoints: BreakPointRegistry) {
-  }
+  constructor(
+    private el: ElementRef,
+    private breakPoints: BreakPointRegistry,
+  ) {}
 
   ngOnInit() {
     this._updateMediaVlue();
@@ -20,6 +29,8 @@ export class FlexMediaDirective implements OnInit, OnChanges {
 
   _updateMediaVlue(value = this.flexBreakPoint) {
     this.el.nativeElement.setAttribute(
-        'media', this.breakPoints.findByAlias(value).mediaQuery);
+      'media',
+      this.breakPoints.findByAlias(value).mediaQuery,
+    );
   }
-};
+}
