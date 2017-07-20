@@ -22,6 +22,8 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+    '@angular/flex-layout':
+        'npm:@angular/flex-layout/bundles/flex-layout.umd.js',
 
       // other libraries
       'rxjs': 'npm:rxjs',
@@ -39,7 +41,7 @@
       rxjs: {
         defaultExtension: 'js'
       },
-      'quickstart-lib': {
+      'angular-flex-picture': {
         main: 'index.js',
         defaultExtension: 'js',
         meta: {

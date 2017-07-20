@@ -1,11 +1,15 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
+import {BreakPointRegistry, DEFAULT_BREAKPOINTS, FlexLayoutModule} from '@angular/flex-layout';
 
-import { LibComponent } from './component/lib.component';
-import { LibService } from './service/lib.service';
+import {FlexMediaDirective} from './directive/flex-media.directive';
 
 @NgModule({
-  declarations: [LibComponent],
-  providers: [LibService],
-  exports: [LibComponent]
+  imports: [
+    FlexLayoutModule,
+  ],
+  declarations: [FlexMediaDirective],
+  providers: [BreakPointRegistry],
+  exports: [FlexMediaDirective]
 })
-export class LibModule { }
+export class FlexMediaModule {
+}

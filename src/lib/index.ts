@@ -1,3 +1,2 @@
-export { LibComponent } from './src/component/lib.component';
-export { LibService } from './src/service/lib.service';
-export { LibModule } from './src/module';
+export {FlexMediaDirective} from './src/directive/flex-media.directive';
+export {FlexMediaModule} from './src/module';
