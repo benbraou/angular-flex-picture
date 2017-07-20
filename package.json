@@ -6,7 +6,7 @@
   "module": "./quickstart-lib.es5.js",
   "es2015": "./quickstart-lib.js",
   "typings": "./quickstart-lib.d.ts",
-  "author": "",
+  "author": "Oussama Ben Brahim",
   "license": "MIT",
   "repository": {},
   "engines": {
