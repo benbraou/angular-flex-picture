@@ -1,6 +1,6 @@
 import {Component, DebugElement} from '@angular/core';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {BreakPointRegistry} from '@angular/flex-layout';
+import {BreakPointRegistry, FlexLayoutModule} from '@angular/flex-layout';
 import {BreakPoint} from '@angular/flex-layout';
 import {By} from '@angular/platform-browser';
 
@@ -35,14 +35,17 @@ describe('Directive: FlexMedia', () => {
   let pictureEl: DebugElement;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [TestFlexMediaComponent, FlexMediaDirective],
-      providers: [{
-        provide: BreakPointRegistry,
-        useFactory: () => new BreakPointRegistry(TEST_BREAKPOINTS),
-        deps: []
-      }]
-    });
+    TestBed
+        .configureTestingModule({
+          imports: [FlexLayoutModule],
+          declarations: [TestFlexMediaComponent, FlexMediaDirective],
+          providers: [{
+            provide: BreakPointRegistry,
+            useFactory: () => new BreakPointRegistry(TEST_BREAKPOINTS),
+            deps: []
+          }]
+        })
+        .compileComponents();
     fixture = TestBed.createComponent(TestFlexMediaComponent);
     component = fixture.componentInstance;
     pictureEl = fixture.debugElement.query(By.css('picture'));
