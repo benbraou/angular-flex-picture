@@ -1,6 +1,6 @@
 {
   "name": "angular-flex-picture",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library QuickStart package.json from the documentation, supplemented with testing support",
   "main": "./bundles/angular-flex-picture.umd.js",
   "module": "./angular-flex-picture.es5.js",

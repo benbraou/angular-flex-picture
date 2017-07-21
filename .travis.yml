@@ -5,6 +5,7 @@ node_js:
   - "6"
 os:
   - linux
+dist: precise
 before_install:
   # Use a virtual display.
   - export DISPLAY=:99.0
