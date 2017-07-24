@@ -1,6 +1,7 @@
 # angular-flex-picture
 
 [![Build Status](https://travis-ci.org/benbraou/angular-flex-picture.svg?branch=main)](https://travis-ci.org/benbraou/angular-flex-picture)
+[![npm](https://nodei.co/npm/angular-flex-picture.png?compact=true)](https://www.npmjs.com/package/angular-flex-picture)
 
 
 angular-flex-picture is a small library that is meant to be used within an @angular/flex-layout project.  
